@@ -1,0 +1,24 @@
+# 本仓库只跟踪开源面：README.md 与 skill/。推上去即开源。
+# 其余目录是私有研究过程、测试装置、开发管理与参考材料，一律不入库。
+
+# 私有：研究过程 / 测试装置 / 开发管理
+/docs/
+/eval/
+/dev/
+/AGENTS.md
+
+# 私有：参考材料（第三方克隆与论文 PDF，取回脚本在 dev/scripts/）
+/repos/
+/papers/
+
+# 临时区（唯一临时落点，任务收尾清空）
+/temp/
+
+# 系统与编辑器垃圾
+.DS_Store
+Thumbs.db
+*.log
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
