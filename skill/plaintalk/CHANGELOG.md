@@ -33,6 +33,21 @@
 
 **组织**：四层（按需单段加载）——层 0 内核 12 条 / 层 1 改法（减法 R1–R12、重组 S1–S9、S8 分级、S9 推算）/ 层 2 场景与语言轨路由 / 层 3 误用边界。
 
+### 补完（2026-10-15）— 六层基线覆盖
+
+作用域定为六层风格变量（私有设计文档 `docs/14-风格作用域与变量分解.md`），skill 按层补至基线覆盖。
+**规则内容带出处、未验收**：出处是成熟仓库与论文，阈值不写硬上限；验收排在场景驱动测试轮
+（`eval/policy.md`），测过才算数。层 0 十二条与 R/S 编号未动，版本号仍是 v0.2。
+
+| 改动 | 出处 |
+|---|---|
+| 新增 `references/tone.md`（语气层：体裁定基调、确定性三步、分受众校准、温度保留）；structure.md 原 §4 语气迁入合并 | blader-humanizer Voice；technical-writing Core Stance；no-ai-slop |
+| 新增 `references/interaction.md`（交互层：收尾言语行为 I1–I3、指令与建议、信息不足的提问纪律） | speak-human-tw patterns 16–18；no-ai-slop；本项目 S8 |
+| 新增 `references/density.md`（密度层：指认对象密度下限、可移植性测试、冗余与节奏 D1–D4） | no-ai-slop；lieflat-less-ai-tone；项目实测 docs/04 |
+| zh.md 增「格式与符号」（#13–18 中西文空格、全角半角、缩写首现）与「层次与语域」节 | chinese-copywriting-guidelines；项目设计 |
+| en.md 增 Format and symbols（#16–18 冒号纪律、缩写、装饰格式）与 Register and tier 节（完整语法短句、连接词、modal ladder、动词担责） | no-ai-slop；SimpleEnglish 的 ASD-STE100 rule-catalog |
+| 层 2 路由增 tone/interaction/density 三条；新增「交付前六层自检」；三个场景包标注加权层；description 扩触发面 | 本轮作用域定义 |
+
 ## v0.1（2026-09-24 ｜ 补完至 2026-09-27）— 首个可交付版
 
 > 本节是 v0.1 的历史记录。它提到的"层 3"指当时的**脚本自检层**（层 0 内核 / 层 1 改法 / 层 2 场景路由 / 层 3 自检），
